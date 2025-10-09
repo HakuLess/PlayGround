@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewPagerTestActivity" />
+        <activity android:name=".KeyboardTestActivity" 
+            android:windowSoftInputMode="adjustNothing" />
     </application>
 
 </manifest>

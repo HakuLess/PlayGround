@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapp.utils.dpToPx
+import com.example.myapp.KeyboardTestActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         // 添加菜单项
         val menuItems = listOf(
             MenuItem("ViewPager比较测试", ViewPagerTestActivity::class.java),
-            MenuItem("测试页面2", MainActivity::class.java),
+            MenuItem("键盘测试页面", KeyboardTestActivity::class.java),
             MenuItem("测试页面3", MainActivity::class.java)
         )
 

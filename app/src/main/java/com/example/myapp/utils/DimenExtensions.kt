@@ -14,13 +14,15 @@ fun Int.dpToPx(): Int {
 
 /**
  * Int类型的dp转px扩展函数
+ * 添加+0.5的偏差是为了在浮点数转整数时实现四舍五入，而不是直接截断小数部分
+ * 这在像素计算中非常重要，可以确保尺寸转换的准确性
  */
 fun Int.dpToPx(context: Context): Int {
-    return TypedValue.applyDimension(
+    return (TypedValue.applyDimension(
         TypedValue.COMPLEX_UNIT_DIP,
         this.toFloat(),
         context.resources.displayMetrics
-    ).toInt()
+    ) + 0.5f).toInt()
 }
 
 /**
@@ -32,13 +34,14 @@ fun Float.dpToPx(): Int {
 
 /**
  * Float类型的dp转px扩展函数
+ * 添加+0.5的偏差是为了在浮点数转整数时实现四舍五入，而不是直接截断小数部分
  */
 fun Float.dpToPx(context: Context): Int {
-    return TypedValue.applyDimension(
+    return (TypedValue.applyDimension(
         TypedValue.COMPLEX_UNIT_DIP,
         this,
         context.resources.displayMetrics
-    ).toInt()
+    ) + 0.5f).toInt()
 }
 
 /**

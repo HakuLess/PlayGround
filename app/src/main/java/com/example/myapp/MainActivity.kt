@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         val menuItems = listOf(
             MenuItem("ViewPager比较测试", ViewPagerTestActivity::class.java),
             MenuItem("键盘测试页面", KeyboardTestActivity::class.java),
-            MenuItem("测试页面3", MainActivity::class.java)
+            MenuItem("协程测试页面", CoroutineDemoActivity::class.java)
         )
 
         menuItems.forEach { item ->

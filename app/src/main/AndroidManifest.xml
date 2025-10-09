@@ -20,6 +20,7 @@
         <activity android:name=".ViewPagerTestActivity" />
         <activity android:name=".KeyboardTestActivity" 
             android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".CoroutineDemoActivity" />
     </application>
 
 </manifest>

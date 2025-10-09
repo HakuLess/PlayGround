@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.myapp.utils.dpToPx
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlin.random.Random
@@ -107,8 +108,6 @@ class ViewPagerTestActivity : AppCompatActivity() {
             tab.text = "Page ${position + 1}"
         }.attach()
     }
-
-    private fun Int.dpToPx(): Int = (this * resources.displayMetrics.density).toInt()
 }
 
 class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
@@ -143,8 +142,6 @@ class LetterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         ))
         textView.layoutParams.height = 44.dpToPx()
     }
-    
-    private fun Int.dpToPx(): Int = (this * itemView.resources.displayMetrics.density).toInt()
 }
 
 class LetterAdapter : RecyclerView.Adapter<LetterViewHolder>() {

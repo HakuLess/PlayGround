@@ -21,6 +21,8 @@
         <activity android:name=".KeyboardTestActivity" 
             android:windowSoftInputMode="adjustNothing" />
         <activity android:name=".CoroutineDemoActivity" />
+        <activity android:name=".UIKitDemoActivity" />
+        <activity android:name=".ComposeDemoActivity" />
     </application>
 
 </manifest>

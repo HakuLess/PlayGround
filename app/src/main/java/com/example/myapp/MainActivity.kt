@@ -12,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapp.utils.dpToPx
 import com.example.myapp.KeyboardTestActivity
+import com.example.myapp.CoroutineDemoActivity
+import com.example.myapp.UIKitDemoActivity
+import com.example.myapp.ComposeDemoActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,11 +38,13 @@ class MainActivity : AppCompatActivity() {
         }
         mainLayout.addView(title)
 
-        // 添加菜单项
+        // 菜单项列表
         val menuItems = listOf(
             MenuItem("ViewPager比较测试", ViewPagerTestActivity::class.java),
             MenuItem("键盘测试页面", KeyboardTestActivity::class.java),
-            MenuItem("协程测试页面", CoroutineDemoActivity::class.java)
+            MenuItem("协程测试页面", CoroutineDemoActivity::class.java),
+            MenuItem("UI Kit演示", UIKitDemoActivity::class.java),
+            MenuItem("Compose UI演示", ComposeDemoActivity::class.java)
         )
 
         menuItems.forEach { item ->
